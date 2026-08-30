@@ -116,3 +116,27 @@ h1 { font-size: 24px; margin: 4px 0 0; }
   opacity: 0.55;
   text-decoration: line-through;
 }
+
+
+/* =========================================
+   JAMCON ATTENDANCE
+   ========================================= */
+
+.attendanceLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  padding: 9px 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.attendanceLink:hover {
+  border-color: #465463;
+}

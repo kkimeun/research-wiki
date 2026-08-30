@@ -1,0 +1,519 @@
+.page {
+  min-height: 100vh;
+  margin: 0;
+  background: #6f8b45;
+}
+
+.loading {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  background: #9fc36d;
+  color: #302719;
+  font-weight: 800;
+}
+
+.scene {
+  position: relative;
+  width: min(100vw, 1280px);
+  aspect-ratio: 1200 / 1311;
+  margin: 0 auto;
+  overflow: hidden;
+
+  background-image: url("/jamcon/attendance-bg.png");
+
+  background-position: top center;
+
+  background-repeat: no-repeat;
+
+  background-size: 100% 100%;
+
+  color: #342819;
+}
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.titleArea {
+  position: absolute;
+  top: 7%;
+  left: 10%;
+  width: 30%;
+}
+
+.eyebrow {
+  margin-bottom: 5%;
+  font-size: clamp(8px, 0.95vw, 14px);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.titleArea h1 {
+  margin: 0;
+
+  color: #332518;
+
+  font-size: clamp(28px, 4.4vw, 60px);
+
+  font-weight: 950;
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+}
+
+.titleArea p {
+  margin: 7% 0 0;
+
+  font-size: clamp(8px, 1.1vw, 15px);
+
+  font-weight: 750;
+}
+
+/* ============================================================
+   BACK BUTTON
+   ============================================================ */
+
+.backButton {
+  position: absolute;
+  top: 4.5%;
+  right: 2.5%;
+  width: 14%;
+  height: 5.5%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 0;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 30;
+}
+
+/* ============================================================
+   STATUS PANEL
+   ============================================================ */
+
+.statusArea {
+  position: absolute;
+  inset: 0;
+}
+
+.statusHeading {
+  position: absolute;
+  left: 17.33%;
+  top: 27.4%;
+  width: 17.92%;
+  text-align: center;
+}
+
+.statusHeading h2 {
+  margin: 0;
+  font-size: clamp(14px, 1.75vw, 24px);
+  font-weight: 900;
+}
+
+.statusHeading p {
+  margin: 7% 0 0;
+  font-size: clamp(9px, 1.15vw, 16px);
+  font-weight: 800;
+}
+
+.checkButton {
+  position: absolute;
+
+  /* detected wooden plank:
+     px=(208,460)-(423,522) on 1200x1311 */
+  left: 17.33%;
+  top: 35.09%;
+  width: 17.92%;
+  height: 4.73%;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+
+  color: #44311d;
+  font-size: clamp(9px, 1.15vw, 16px);
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.checkButton:disabled {
+  cursor: default;
+}
+
+.clickSheep {
+  position: absolute;
+
+  bottom: 79.8%;
+
+  /* inside the empty space beside 출석체크 */
+  left: 33%;
+
+  width: 4.4%;
+  height: auto;
+
+  transform-origin: center bottom;
+  transition: transform 220ms ease-out;
+
+  pointer-events: none;
+  z-index: 20;
+}
+
+.statusNote {
+  position: absolute;
+  left: 16.5%;
+  top: 40.7%;
+  width: 19.6%;
+
+  text-align: center;
+
+  font-size: clamp(7px, 0.85vw, 12px);
+  font-weight: 700;
+}
+
+/* ============================================================
+   STAT CARDS
+   ============================================================ */
+
+.clickCount {
+  position: absolute;
+
+  left: 16.5%;
+  top: 42.15%;
+  width: 19.6%;
+
+  text-align: center;
+
+  color: rgba(73, 52, 31, 0.72);
+
+  font-size: clamp(7px, 0.72vw, 10px);
+  font-weight: 800;
+}
+
+.statCards {
+  position: absolute;
+  inset: 0;
+}
+
+.statCards > div {
+  position: absolute;
+
+  /* template matched y=345..540 */
+  top: 26.32%;
+  width: 13.75%;
+  height: 14.87%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.statCards > div:nth-child(1) {
+  left: 40.42%;
+}
+
+.statCards > div:nth-child(2) {
+  left: 54.42%;
+}
+
+.statCards > div:nth-child(3) {
+  left: 68.08%;
+}
+
+.statCards span {
+  font-size: clamp(8px, 1vw, 14px);
+  font-weight: 900;
+}
+
+.statCards strong {
+  margin-top: 7%;
+  font-size: clamp(27px, 3.7vw, 52px);
+  line-height: 0.9;
+}
+
+.statCards small {
+  margin-top: 8%;
+  font-size: clamp(7px, 0.8vw, 12px);
+  font-weight: 900;
+}
+
+/* ============================================================
+   CALENDAR
+   ============================================================ */
+
+.calendarArea {
+  position: absolute;
+
+  /* whole baked calendar panel */
+  left: 9.67%;
+  top: 45.46%;
+  width: 46.67%;
+  height: 40.66%;
+}
+
+.monthLabel {
+  position: absolute;
+
+  /* month title inside parchment */
+  left: 8%;
+  top: 6%;
+  margin: 0;
+
+  font-size: clamp(16px, 2.4vw, 32px);
+  font-weight: 950;
+}
+
+.calendar {
+  position: absolute;
+
+  /* actual 7-column date grid in background */
+  /* detected baked grid:
+     x=148..641, y=710..1110 on 1200x1311 */
+  left: 5.71%;
+  top: 21.39%;
+  width: 88.03%;
+  height: 75.03%;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0;
+}
+
+.day,
+.empty {
+  position: relative;
+
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  font-size: clamp(8px, 1.15vw, 16px);
+  font-weight: 750;
+}
+
+.day {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.empty {
+  pointer-events: none;
+}
+
+.day.selected {
+  box-shadow: inset 0 0 0 2px rgba(105, 83, 38, 0.55);
+}
+
+.day.checked {
+  background: rgba(154, 177, 75, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(95, 119, 35, 0.7);
+  font-weight: 950;
+}
+
+.day.today {
+  background: rgba(167, 190, 77, 0.18);
+}
+
+.day span {
+  position: absolute;
+
+  right: 7%;
+  bottom: 4%;
+
+  display: grid;
+
+  width: 1.2em;
+  height: 1.2em;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #67802a;
+  color: #f4e9c9;
+
+  font-size: 0.75em;
+}
+
+/* ============================================================
+   RECENT
+   ============================================================ */
+
+.recentArea {
+  position: absolute;
+
+  /* detected inner recent-attendance row:
+     px=(711,682)-(1065,754) on 1200x1311 */
+  left: 59.25%;
+  top: 52.02%;
+  width: 29.5%;
+  height: 5.49%;
+}
+
+.recentItem {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 13% 1fr;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  /* border already exists in the background image */
+  padding: 0 7%;
+  border: 0;
+  border-radius: 0;
+}
+
+.index {
+  font-size: clamp(7px, 0.9vw, 12px);
+
+  font-weight: 900;
+}
+
+.recentItem strong {
+  display: block;
+
+  font-size: clamp(8px, 1.05vw, 15px);
+}
+
+.recentItem small {
+  display: block;
+
+  margin-top: 3%;
+
+  font-size: clamp(7px, 0.8vw, 11px);
+}
+
+.noRecord {
+  font-size: clamp(8px, 1vw, 14px);
+}
+
+/* ============================================================
+   DIARY
+   ============================================================ */
+
+.diaryArea {
+  position: absolute;
+
+  /* lined paper inside diary panel */
+  left: 60.3%;
+  top: 70.7%;
+  width: 32.4%;
+  height: 15.8%;
+}
+
+.diaryDate {
+  position: absolute;
+  top: -12%;
+  right: 2%;
+  color: rgba(73, 52, 31, 0.72);
+  font-size: clamp(7px, 0.8vw, 11px);
+  font-weight: 850;
+}
+
+.diaryInput {
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+  resize: none;
+
+  padding: 1% 2%;
+
+  border: 0;
+  outline: 0;
+  background: transparent;
+
+  color: #49341f;
+
+  font: inherit;
+  font-size: clamp(9px, 1vw, 14px);
+  font-weight: 650;
+  line-height: 2.05;
+
+  overflow-y: auto;
+}
+
+.diaryInput::placeholder {
+  color: rgba(73, 52, 31, 0.38);
+}
+
+.diaryStatus {
+  position: absolute;
+  right: 1%;
+  bottom: -12%;
+
+  font-size: clamp(7px, 0.7vw, 10px);
+  font-weight: 750;
+
+  color: rgba(73, 52, 31, 0.65);
+}
+
+/* ============================================================
+   BOTTOM
+   ============================================================ */
+
+.bottomCheckButton {
+  position: absolute;
+  bottom: 3.5%;
+  left: 35%;
+  width: 29%;
+  height: 7%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.error {
+  position: absolute;
+
+  right: 4%;
+
+  bottom: 3%;
+
+  padding: 0.5em 0.8em;
+
+  border-radius: 5px;
+
+  background: rgba(120, 35, 25, 0.9);
+
+  color: white;
+
+  font-size: 11px;
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 720px) {
+  .scene {
+    width: 100vw;
+
+    min-width: 680px;
+  }
+
+  .page {
+    overflow-x: auto;
+  }
+}

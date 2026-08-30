@@ -7,3 +7,9 @@ public/uploads/*
 !public/uploads/.gitkeep
 *.bak
 *.bak.*
+
+data/jamcon/attendance.json
+data/jamcon/attendance.json.tmp
+
+.venv/
+\ndata/jamcon/diary.json\ndata/jamcon/diary.json.tmp\n

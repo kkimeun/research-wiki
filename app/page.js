@@ -6,6 +6,8 @@ import {
   useState,
 } from 'react';
 
+import Link from 'next/link';
+
 import ResearchEditor from '../components/ResearchEditor';
 
 import {
@@ -2676,6 +2678,13 @@ replace보다 patch를 우선 사용해줘.
 
 
         <div className="actions">
+
+          <Link
+            href="/jamcon/attendance"
+            className="attendanceLink"
+          >
+            출석 판
+          </Link>
 
           <button
             onClick={
