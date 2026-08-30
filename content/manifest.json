@@ -1,0 +1,37 @@
+{
+  "welcome-home": {
+    "title": "Getting Started / Welcome",
+    "group": "Getting Started",
+    "type": "document",
+    "file": "getting-started/welcome.html",
+    "workId": "getting-started"
+  },
+  "welcome-guide": {
+    "title": "Getting Started / Guide",
+    "group": "Getting Started",
+    "type": "document",
+    "file": "getting-started/guide.html",
+    "workId": "getting-started"
+  },
+  "example-overview": {
+    "title": "Example Project / Overview",
+    "group": "Example Project",
+    "type": "document",
+    "file": "example-project/overview.html",
+    "workId": "example-project"
+  },
+  "example-notes": {
+    "title": "Example Project / Research Notes",
+    "group": "Example Project",
+    "type": "document",
+    "file": "example-project/notes.html",
+    "workId": "example-project"
+  },
+  "example-todo": {
+    "title": "Example Project / TODO",
+    "group": "Example Project",
+    "type": "document",
+    "file": "example-project/todo.html",
+    "workId": "example-project"
+  }
+}
